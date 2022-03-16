@@ -1,0 +1,16 @@
+@import "./Vars.scss";
+@import "./Media.scss";
+
+body {
+    margin: 0;
+    font-family: $theme-font;
+    background-color: $neutral-5;
+        /* Desktop/Body/M/bold */
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    // display: flex;
+    // position: absolute;
+
+  }
+  

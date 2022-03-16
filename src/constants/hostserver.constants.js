@@ -1,0 +1,1 @@
+export const HOSTSERVER = "https://syn-api-prod.herokuapp.com/graphql";
