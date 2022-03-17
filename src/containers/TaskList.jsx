@@ -5,8 +5,28 @@ import '../assets/styles/Home.scss';
 import '../assets/styles/TaskList.scss';
 import Search from '../components/Search';
 import userIcon from '../assets/img/people.png';
+// import { GET_ALL_PEOPLE } from '../graphql/query';
+import { gql, useQuery } from '@apollo/client';
+
+const GET_ALL_PEOPLE = gql`
+query{
+    users{
+    id
+    fullName
+    email
+    
+    }
+}
+`;
+
+
 
 const TaskList = () => {
+    console.log("sdb");
+    const result = useQuery(GET_ALL_PEOPLE)
+    console.log("sdvks",result);
+    console.log("sdb");
+        
     const { tasks, deleteTask, toggleTaskDone } = useContext(GlobalContext);
     return (
         <>
@@ -20,13 +40,13 @@ const TaskList = () => {
                             <thead>
                                 <tr >
                                     <th>User</th>
-                                    <th>Date Order</th>
+                                    <th>Email</th>
                                     <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {tasks.map((task) => (
-                                    
+
                                     <tr key={task.id}>
                                         <td>
                                             <img
@@ -34,20 +54,20 @@ const TaskList = () => {
                                                 src={userIcon}
                                                 alt="Usuario"
                                             />
-                                            <p>John Doe {task.title}</p>
+                                            <p> {task.fullName}</p>
                                         </td>
-                                        <td>01-10-2021  {task.description}</td>
+                                        <td> {task.email}</td>
                                         <td>
                                             {/* <button> */}
-                                                <button className="status completed" onClick={() => toggleTaskDone(task.id)}>
-                                                    Completed {task.done ? "Undone" : "Done"}</button>
+                                            <button className="status completed" onClick={() => toggleTaskDone(task.id)}>
+                                                {task.done ? "Undone" : "Done"}</button>
                                             {/* </button> */}
 
                                         </td>
                                         <td>
                                             <Link
                                                 to={`/edit/${task.id}`}
-                                                className="edit"
+                                                className="status progress"
                                             >
                                                 Edit
                                             </Link>
@@ -67,6 +87,9 @@ const TaskList = () => {
                     ) : (
                         <p >No Tasks yet</p>
                     )}
+                </div>
+                <div className="gq">
+
                 </div>
             </div>
 

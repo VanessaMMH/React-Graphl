@@ -11,8 +11,8 @@ const TaskForm = () => {
 
   const [task, setTask] = useState({
     id: "",
-    title: "",
-    description: "",
+    fullName: "",
+    email: "",
   });
   const { addTask, updateTask, tasks } = useContext(GlobalContext);
 
@@ -29,7 +29,7 @@ const TaskForm = () => {
     } else {
       updateTask(task);
     }
-    navigate("/");
+    navigate("/tasks");
   };
 
   useEffect(() => {
@@ -37,8 +37,8 @@ const TaskForm = () => {
     if (taskFound) {
       setTask({
         id: taskFound.id,
-        title: taskFound.title,
-        description: taskFound.description,
+        fullName: taskFound.fullName,
+        email: taskFound.email,
       });
     }
   }, [params.id, tasks]);
@@ -52,18 +52,18 @@ const TaskForm = () => {
         <input
           className='controls' 
           type="text"
-          name="title"
-          value={task.title}
+          name="fullName"
+          value={task.fullName}
           onChange={handleChange}
-          placeholder="Write a title"
+          placeholder="Write a fullName"
           autoFocus
         />
         <textarea
          className='controls' 
-         value={task.description}
-         name="description"
+         value={task.email}
+         name="email"
          rows="2"
-         placeholder="write a description"
+         placeholder="write a email"
          onChange={handleChange}
          ></textarea>
         <button className='botons'>
