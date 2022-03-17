@@ -29,7 +29,7 @@ const Sidebar = () => (
             </Link>
         </div>
         <div className="sidebar__info">
-            <Link to='/add'>
+            <Link to='/tasks'>
                 <img
                     className="sidebar__info--img"
                     src={menugridIcon}
