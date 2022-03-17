@@ -5,6 +5,7 @@ import '../assets/styles/Home.scss';
 import '../assets/styles/TaskList.scss';
 import Search from '../components/Search';
 import userIcon from '../assets/img/people.png';
+
 const TaskList = () => {
     const { tasks, deleteTask, toggleTaskDone } = useContext(GlobalContext);
     return (
@@ -53,7 +54,6 @@ const TaskList = () => {
                                         </td>
                                         <td>
                                             <button
-                                                className="bg-red-600 hover:bg-red-500 py-2 px-4 mr-2"
                                                 onClick={() => deleteTask(task.id)}
                                             >
                                                 Delete
@@ -65,7 +65,7 @@ const TaskList = () => {
 
                         </table>
                     ) : (
-                        <p className="bg-gray-600 text-gray-100 py-5 px-10">No Tasks yet</p>
+                        <p >No Tasks yet</p>
                     )}
                 </div>
             </div>

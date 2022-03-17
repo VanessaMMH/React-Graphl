@@ -46,6 +46,13 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function toggleTaskProgress(id) {
+    dispatch({
+      type: "TOGGLE_TASK_PROGRESS",
+      payload: id,
+    });
+  }
+
   function toggleTaskDone(id) {
     dispatch({
       type: "TOGGLE_TASK_DONE",
@@ -60,7 +67,8 @@ export const GlobalProvider = ({ children }) => {
         addTask,
         updateTask,
         deleteTask,
-        toggleTaskDone
+        toggleTaskDone,
+        toggleTaskProgress
       }}
     >
       {children}
