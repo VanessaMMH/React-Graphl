@@ -7,13 +7,13 @@ const initialState = {
   tasks: [
     {
       id: "1",
-      title: "some title",
+      title: "some title 1",
       description: "some description",
       done: false,
     },
     {
       id: "2",
-      title: "some title",
+      title: "some title 2",
       description: "some description",
       done: false,
     },

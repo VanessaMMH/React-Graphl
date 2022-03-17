@@ -29,15 +29,17 @@ const Dashboard = () => (
                     </Link>
                 </li>
             </ul>
-            <div className="dashboard__head--btn">
-                <Link to='/add'>
+            <Link to='/add'>
+                <div className="dashboard__head--btn">
+
                     <img
                         className="dashboard__img"
                         src={plusIcon}
                         alt="plusIcon"
                     />
-                </Link>
-            </div>
+
+                </div>
+            </Link>
         </div>
         <div className="dashboard__card--grid">
             <div className="dashboard__card--item">
@@ -349,7 +351,7 @@ const Dashboard = () => (
                     <p>Completed</p>
                     <p>(02)</p>
                 </div>
-             
+
                 <div className="dashboard__card--item-body">
                     <div className="card__header">
                         <p> Google  </p>
