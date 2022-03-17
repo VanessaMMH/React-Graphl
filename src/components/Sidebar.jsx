@@ -17,7 +17,7 @@ const Sidebar = () => (
 
 
         <div className="sidebar__info">
-            <Link to='/dashboard'>
+            <Link to='/'>
                 <img
                     className="sidebar__info--img"
                     src={menuIcon}
@@ -29,7 +29,7 @@ const Sidebar = () => (
             </Link>
         </div>
         <div className="sidebar__info">
-            <Link to='/task'>
+            <Link to='/add'>
                 <img
                     className="sidebar__info--img"
                     src={menugridIcon}

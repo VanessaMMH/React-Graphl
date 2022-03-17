@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch as Switch, Route } from "react-router-dom";
-// import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Layout from '../components/Layout.jsx';
+import Sidebar from '../components/Sidebar';
 import Home from '../containers/Home';
-// import Player from '../containers/Player';
-// import Login from '../containers/Login';
-// import Register from '../containers/Register';
-// import NotFount from '../containers/NotFount';
+import Task from '../containers/Task';
+
+
 
 const App = () => (
   <Router>
-    <Layout>
+    <Sidebar/>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/add" component={Task} />
+        
       </Switch>
-    </Layout>
+    
   </Router>
 );
 
