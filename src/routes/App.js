@@ -6,7 +6,6 @@ import Home from '../containers/Home.jsx';
 import Task from '../containers/Task';
 import TaskList from '../containers/TaskList';
 
-console.log();
 
 const App = () => (
   <GlobalProvider>

@@ -4,26 +4,12 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import '../assets/styles/components/Search.scss';
-import searchIcon from '../assets/img/search.svg';
-// import userIcon from '../assets/img/user-icon.png';
 import userIcon from '../assets/img/people.png';
 
 const Search = ({ isHome }) => {
   const inputStyle = classNames('input', {
     isHome,
   });
-  // const updateInput = event => {
-  //   setValues({
-  //     ...form,
-  //     [event.target.name]: event.target.value
-  //   });
-  // };
-  // const handleSubmit = event => {
-  //   console.log(form);
-  //   event.preventDefault();
-  //   isHome.loginRequest(form);
-  //   isHome.history.push('/');
-  // }
 
   return (
     <>

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/components/Dashboard.scss';
 import plusIcon from '../assets/img/plusButton.svg';
 import spreadIcon from '../assets/img/spread.svg';
-import alarmIcon from '../assets/img/alarm.svg';
 import userIcon from '../assets/img/people.png';
 import clipIcon from '../assets/img/clip.svg';
 import shareIcon from '../assets/img/share.svg';

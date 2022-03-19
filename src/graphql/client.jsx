@@ -1,4 +1,4 @@
-import { ApolloClient,gql, HttpLink, ApolloLink, InMemoryCache, concat } from '@apollo/client';
+import { ApolloClient, HttpLink, ApolloLink, InMemoryCache } from '@apollo/client';
 
 import { useAuthToken } from "./auth";
 
