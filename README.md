@@ -2,6 +2,8 @@
 
 ## My project with Create React App
 
+###  [Deploy](https://relaxed-einstein-047a06.netlify.app/)
+
 
 In the project directory, you can run:
 
