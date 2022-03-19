@@ -20,7 +20,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 - Context API
 - Webpack
 
-> I was working with graphql but no success in the backend 😶‍🌫️
+Help me with a pseudo API to give it functionality.
+
+> I was working with graphql but no success in the backend 😶‍🌫️ ... I'm still learning!
 
 
 

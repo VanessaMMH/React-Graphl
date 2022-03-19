@@ -13,7 +13,7 @@ import comentIcon from '../assets/img/coment.svg';
 const Dashboard = () => (
     <div className="dashboard" id="dashboard">
         <div className="dashboard__head">
-            <ul class="breadcrumb">
+            <ul className="breadcrumb">
                 <li>
                     <Link to='/'>
                         <svg width="18" height="16" viewBox="0 0 18 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
