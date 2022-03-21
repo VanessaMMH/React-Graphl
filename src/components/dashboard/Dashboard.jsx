@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import '../assets/styles/components/Dashboard.scss';
-import plusIcon from '../assets/img/plusButton.svg';
-import spreadIcon from '../assets/img/spread.svg';
-import userIcon from '../assets/img/people.png';
-import clipIcon from '../assets/img/clip.svg';
-import shareIcon from '../assets/img/share.svg';
-import comentIcon from '../assets/img/coment.svg';
+import '../../assets/styles/GeneralStyles.scss';
+import './Dashboard.scss';
+import plusIcon from '../../assets/img/plusButton.svg';
+import spreadIcon from '../../assets/img/spread.svg';
+import userIcon from '../../assets/img/people.png';
+import clipIcon from '../../assets/img/clip.svg';
+import shareIcon from '../../assets/img/share.svg';
+import comentIcon from '../../assets/img/coment.svg';
 
 const Dashboard = () => (
     <div className="dashboard" id="dashboard">

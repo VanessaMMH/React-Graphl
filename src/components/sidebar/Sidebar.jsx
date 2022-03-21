@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/Sidebar.scss';
-import ravnIcon from '../assets/img/ravn-logo.png';
-import menuIcon from '../assets/img/menu.svg';
-import menugridIcon from '../assets/img/menu-grid.svg';
+import './Sidebar.scss';
+import ravnIcon from '../../assets/img/ravn-logo.png';
+import menuIcon from '../../assets/img/menu.svg';
+import menugridIcon from '../../assets/img/menu-grid.svg';
 
 const Sidebar = () => (
     <div className="sidebar" id="sidebar">
@@ -12,7 +12,6 @@ const Sidebar = () => (
                 src={ravnIcon}
                 alt="ravnIcon"
             />
-
         </div>
 
 
@@ -38,9 +37,6 @@ const Sidebar = () => (
                 MY TASKS
             </Link>
         </div>
-
-
-
     </div>
 );
 

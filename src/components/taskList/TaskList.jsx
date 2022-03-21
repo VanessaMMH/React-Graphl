@@ -1,47 +1,25 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../context/GlobalState'
+import { GlobalContext } from '../../context/GlobalState'
 import { Link } from 'react-router-dom';
-import '../assets/styles/Home.scss';
-import '../assets/styles/TaskList.scss';
-import Search from '../components/Search';
-import userIcon from '../assets/img/people.png';
-// import { GET_ALL_PEOPLE } from '../graphql/query';
-import { gql, useQuery } from '@apollo/client';
-
-const GET_ALL_PEOPLE = gql`
-query{
-    users{
-    id
-    fullName
-    email
-    
-    }
-}
-`;
-
-
+import '../../assets/styles/GeneralStyles.scss'
+import '../taskList/TaskList.scss'
+import userIcon from '../../assets/img/people.png';
 
 const TaskList = () => {
-    console.log("sdb");
-    const result = useQuery(GET_ALL_PEOPLE)
-    console.log("sdvks",result);
-    console.log("sdb");
-        
+          
     const { tasks, deleteTask, toggleTaskDone } = useContext(GlobalContext);
     return (
         <>
-            <Search />
-
             <div className="dashboard">
                 <div className="table-data">
                     {tasks.length > 0 ? (
-
                         <table>
                             <thead>
                                 <tr >
                                     <th>User</th>
                                     <th>Email</th>
                                     <th>Status</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,11 +36,8 @@ const TaskList = () => {
                                         </td>
                                         <td> {task.email}</td>
                                         <td>
-                                            {/* <button> */}
                                             <button className="status completed" onClick={() => toggleTaskDone(task.id)}>
                                                 {task.done ? "Undone" : "Done"}</button>
-                                            {/* </button> */}
-
                                         </td>
                                         <td>
                                             <Link
@@ -88,15 +63,11 @@ const TaskList = () => {
                         <p >No Tasks yet</p>
                     )}
                 </div>
-                <div className="gq">
-
-                </div>
+               
             </div>
 
         </>
-
     )
-
 };
 
 export default TaskList

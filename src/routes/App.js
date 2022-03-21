@@ -1,23 +1,25 @@
 import React from 'react';
 import { GlobalProvider } from "../context/GlobalState";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Sidebar from '../components/Sidebar';
-import Home from '../containers/Home.jsx';
-import Task from '../containers/Task';
-import TaskList from '../containers/TaskList';
+
+import Sidebar from '../components/sidebar/Sidebar';
+import Search from '../components/search/Search';
+import TaskForm from '../components/taskForm/TaskForm';
+import Dashboard from '../components/dashboard/Dashboard';
+import TaskList from '../components/taskList/TaskList';
 
 
 const App = () => (
   <GlobalProvider>
     <Router>
       <Sidebar />
+      <Search />
       <Routes>
-        <Route exact path="/"element={<Home />} />
-        <Route path="/add" element={<Task />} />
-        <Route path="/edit/:id" element={<Task />} />
+        <Route exact path="/"element={<Dashboard />} />
+        <Route path="/add" element={<TaskForm />} />
+        <Route path="/edit/:id" element={<TaskForm />} />
         <Route path="/tasks" element={<TaskList />} />
       </Routes>
-
     </Router>
   </GlobalProvider>
 );

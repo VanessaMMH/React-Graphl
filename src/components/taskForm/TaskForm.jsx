@@ -1,13 +1,11 @@
 import React from 'react'
 import { useContext, useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { GlobalContext } from "../context/GlobalState";
-import '../assets/styles/components/Dashboard.scss';
-import '../assets/styles/components/TaskForm.scss';
+import { GlobalContext } from "../../context/GlobalState";
+import '../dashboard/Dashboard.scss';
+import './TaskForm.scss';
 
 const TaskForm = () => {
-
-
 
   const [task, setTask] = useState({
     id: "",
